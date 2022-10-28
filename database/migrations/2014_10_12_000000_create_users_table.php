@@ -34,3 +34,8 @@ return new class extends Migration
         Schema::dropIfExists('users');
     }
 };
+
+// Migration
+/*
+    Migrasi seperti version control (git), untuk melacak perubahan.
+*/
