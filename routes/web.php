@@ -19,7 +19,7 @@ use App\Models\Category;
 Route::get('/', function () {
     return view('home', [
         "title" => "Home",
-        "active" => '/'
+        "active" => 'home'
     ]);
 });
 
@@ -37,7 +37,7 @@ Route::get('/about', function () {
 
 Route::get('/posts', [PostController::class, 'index']);
 // halaman single post
-Route::get('posts/{post:slug}', [PostController::class, 'show']);
+Route::get('/posts/{post:slug}', [PostController::class, 'show']);
 
 Route::get('/categories', function(){
     return view('categories', [
@@ -49,3 +49,4 @@ Route::get('/categories', function(){
 
 Route::get('/login', [LoginController::class, 'index']);
 Route::get('/register', [RegisterController::class, 'index']);
+Route::post('/register', [RegisterController::class, 'store']);

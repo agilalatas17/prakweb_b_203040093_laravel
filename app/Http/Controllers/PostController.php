@@ -32,6 +32,7 @@ class PostController extends Controller{
     public function show(Post $post) {
         return view('post', [
             "title" => "Single Post",
+            'active' => 'blog',
             "post" => $post
         ]);
     }
